@@ -24,14 +24,12 @@ def main():
 
 def get_user_details():
     try:
-        user_detail = (Dbsession
-                          .query(User.first_name, User.last_name)
-                          .first())
+        user_detail = (Dbsession.query(User.first_name, User.last_name).first())
         if not user_detail:
             return False
         return user_detail
     except Exception as err:
-        self.log.error(f"Error while getting the user details reason {err}")
+        print(f"Error while getting the user details reason {err}")
         return False
     finally:
         Dbsession.close()
