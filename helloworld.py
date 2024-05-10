@@ -18,7 +18,7 @@ def main():
     user_detail = get_user_details()
     user_name = "Default user"
     if user_detail:
-       user_name = f"{user_detail.first_name} {user_name.last_name}"
+       user_name = f"{user_detail.first_name} {user_detail.last_name}"
     return f'Hello, {user_name}!'
     
 
