@@ -2,7 +2,7 @@ import StatLogger
 import yaml
 from dbconfig import Dssdb
 import urllib
-from sqlalchemy import Column,  Integer, SmallInteger, String, 
+from sqlalchemy import Column, Integer, SmallInteger, String
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
