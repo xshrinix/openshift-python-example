@@ -1,20 +1,16 @@
-import StatLogger
 import yaml
 from dbconfig import Dssdb
 import urllib
-from sqlalchemy import Column, Integer, SmallInteger, String
-from sqlalchemy.orm import relationship
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
-
-logg = StatLogger.setup_custom_logger()
 
 try:
     with open("config.yml", 'r') as ymlfile:
         conf = yaml.safe_load(ymlfile)
 except Exception as ex:
-    logg.error(f"Error while reading the configuration file for driver usage reason: {ex}")
+    print(f"Error while reading the configuration file for driver usage reason: {ex}")
     exit(0)
 
 if str(conf['main_setting']['database']).lower().strip() == 'mysql':
