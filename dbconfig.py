@@ -1,5 +1,5 @@
 class Dssdb:
-    host =  "10.217.5.152" # "mysql.xtreme-signage-app.svc.cluster.local"
+    host =  "10.217.1.7" # "mysql.xtreme-signage-app.svc.cluster.local"
     username = "root"
     password = "Admin@1234" # "Db@XtremeMedia2021"
     db = "signage"
